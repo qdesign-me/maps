@@ -1,0 +1,66 @@
+import { TCoordinates, TMapEvent } from '@/types/map';
+import config from '@/config';
+
+export const mapInitialProps = {
+  accessToken: config.apiMapboxToken,
+  style: 'mapbox://styles/mapbox/streets-v10',
+  zoom: 8,
+  center: [-118.28008713087794, 33.957353268556204] as TCoordinates,
+};
+
+export const icons = [
+  { name: 'home', url: './home.png' },
+  { name: 'church', url: './church.png' },
+  { name: 'big-home', url: './big-home.png' },
+  { name: 'big-church', url: './big-church.png' },
+];
+export const clickBufferTolerance = 5;
+
+export const mapEvents: Array<keyof TMapEvent> = [
+  'error',
+  'load',
+  'idle',
+  'remove',
+  'render',
+  'resize',
+  'webglcontextlost',
+  'webglcontextrestored',
+  'dataloading',
+  'data',
+  'tiledataloading',
+  'sourcedataloading',
+  'styledataloading',
+  'sourcedata',
+  'styledata',
+  'boxzoomcancel',
+  'boxzoomstart',
+  'boxzoomend',
+  'touchcancel',
+  'touchmove',
+  'touchend',
+  'touchstart',
+  'click',
+  'contextmenu',
+  'dblclick',
+  'mousemove',
+  'mouseup',
+  'mousedown',
+  'mouseout',
+  'mouseover',
+  'movestart',
+  'move',
+  'moveend',
+  'zoomstart',
+  'zoom',
+  'zoomend',
+  'rotatestart',
+  'rotate',
+  'rotateend',
+  'dragstart',
+  'drag',
+  'dragend',
+  'pitchstart',
+  'pitch',
+  'pitchend',
+  'wheel',
+];
